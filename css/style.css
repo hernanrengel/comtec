@@ -1,0 +1,422 @@
+/* -------------------------------------------------------------- 
+  
+   style.css
+   * Main CSS file.
+   
+-------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400|Euphoria+Script);
+
+
+/* === Main Section === */
+* { margin: 0; padding: 0; outline: 0; }
+
+html, body {
+	width: 100%;
+	height: 100%;
+	
+	min-width: 480px;
+	min-height: 640px;
+	
+	font: 1em 'Myriad Pro', 'Open Sans', sans-serif;
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+body { 
+	background: #999 no-repeat center top fixed;
+	background-image: url(../img/bg.jpg);
+}
+
+::-webkit-input-placeholder { color: #DDD }
+:-moz-placeholder { color: #DDD }
+:-ms-input-placeholder { color: #DDD }
+
+.clear { clear: both }
+
+#wrapper {
+	margin: 0 auto;
+	width: 820px;
+}
+
+/* === Header Section === */
+header {
+	padding-top: 50px;
+}
+
+#logo {
+	font: bold 3.5em 'Oswald';
+	text-align: center;
+	text-shadow: 1px 1px 2px #111;
+}
+
+/* === Timer Section === */
+#countdown {
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: 5px 5px 20px black;
+	padding: 15px;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.lable {
+	font-size: 1.1em;
+	color: #EEE;
+	text-shadow: 1px 1px 1px #111;
+	text-align: center;
+	opacity: .6;
+}
+
+#progressbar {
+	margin: 30px auto;
+	width: 738px;
+	height: 30px;
+}
+
+#progressbar > .wrap { position: absolute; width: 738px; height: 30px; }
+
+#progressbar .back {
+	width: 100%;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	
+	background-color: rgba(0, 0, 0, .1);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .2)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .2));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .2));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .2));
+	background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .2));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#33000000)"; /* IE8 */
+    	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#33000000);   /* IE6 & 7 */
+    	  zoom: 1;
+	
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+#progressbar .front {
+	position: absolute;
+	margin-top: -31px;
+	width: 10%;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.3);
+	border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#progressbar .num {
+	position: absolute;
+	margin-top: -24px;
+	margin-left: 35px;
+	font: 1em Arial;
+	color: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+}
+
+#progressbar .launch-date {
+	margin-top: 5px;
+	font-family: Arial;
+	text-align: right;
+	text-shadow: 1px 1px 1px #111;
+}
+
+/* === Subscribe form & Social icons Section === */
+#communication {
+	margin-top: 40px;
+}
+
+#email,
+#social {
+	width: 384px;
+}
+
+#email {
+	float: left;
+}
+
+
+#social {
+	float: right;
+}
+
+#email h3.title, 
+#social h3.title {
+	font-size: 1.5em;
+	text-align: center;
+	text-shadow: 1px 1px 1px #111;	
+}
+
+#email > .body {
+	text-align: center;
+}
+
+#email form {
+	margin: 20px 0;	
+}
+
+#email form > input {
+	padding: 0 10px;
+	width: 200px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	
+	background-color: transparent;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, .3)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#4C000000)"; /* IE8 */
+    	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#4C000000);   /* IE6 & 7 */
+    	  zoom: 1;
+
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+	        box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+	
+	color: #EEE;  
+	
+	-webkit-transition: box-shadow 0.2s ease; 
+	   -moz-transition: box-shadow 0.2s ease; 
+	     -o-transition: box-shadow 0.2s ease; 
+	        transition: box-shadow 0.2s ease; 
+}
+
+#email form > input.notvalid {
+	-webkit-box-shadow: 1px 1px 3px 0px transparent, inset 0px 0px 10px 0px rgba(100, 0, 0, 0.7) !important;
+	   -moz-box-shadow: 1px 1px 3px 0px transparent, inset 0px 0px 10px 0px rgba(100, 0, 0, 0.7) !important;
+	        box-shadow: 1px 1px 3px 0px transparent, inset 0px 0px 10px 0px rgba(100, 0, 0, 0.7) !important;
+}
+
+#email form > button {
+	margin-left: 5px;
+	padding: 0 10px;
+	height: 31px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	
+	background-color: transparent;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, .3)));
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	background-image:      -o-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)); 
+	background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#4C000000)"; /* IE8 */
+    	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#4C000000);   /* IE6 & 7 */
+    	  zoom: 1;
+	
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+ 	        box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+ 	        
+	color: #DDD;
+	cursor: pointer;
+	
+	-webkit-transition: all 0.2s ease; 
+	   -moz-transition: all 0.2s ease; 
+	     -o-transition: all 0.2s ease; 
+	        transition: all 0.2s ease; 
+}
+
+#email form > button:hover {
+	color: #EEE;
+}
+
+
+#email form > input:focus,
+#email form > button:active {
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0), inset -1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0), inset -1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+	        box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0), inset -1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+	
+	color: #EEE;
+}
+
+#thank-you {
+	margin: 20px 0;
+	height: 32px;
+	font-size: 1.1em;
+	opacity: 0
+}
+
+#social > .body {
+	text-align: center;
+}
+
+/* === Icons Section === */
+#icons {
+	margin: 20px auto 0;
+	list-style: none;
+	display: inline-block;
+}
+
+#icons > li {
+	margin: 0 10px;
+	float: left;
+}
+
+#icons > li a {
+	width: 32px;
+	height: 32px;
+	opacity: .6;
+	display: block;
+	
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+	   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+	        box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+	
+	-webkit-transition: opacity 0.2s ease; 
+	   -moz-transition: opacity 0.2s ease; 
+	     -o-transition: opacity 0.2s ease; 
+	        transition: opacity 0.2s ease;
+}
+
+#icons > li a:hover { opacity: 1; }
+
+#icons .fb 			{ background: url(../img/icons/fb.png) no-repeat }
+#icons .forrst 		{ background: url(../img/icons/forrst.png) no-repeat }
+#icons .friend_feed { background: url(../img/icons/friend_feed.png) no-repeat }
+#icons .google 		{ background: url(../img/icons/google.png) no-repeat }
+#icons .gplus 		{ background: url(../img/icons/gplus.png) no-repeat }
+#icons .heart		{ background: url(../img/icons/heart.png) no-repeat }
+#icons .lastfm 		{ background: url(../img/icons/lastfm.png) no-repeat }
+#icons .linkedin 	{ background: url(../img/icons/linkedin.png) no-repeat }
+#icons .microsoft 	{ background: url(../img/icons/microsoft.png) no-repeat }
+#icons .netvibes 	{ background: url(../img/icons/netvibes.png) no-repeat }
+#icons .newsvine 	{ background: url(../img/icons/newsvine.png) no-repeat }
+#icons .orkut 		{ background: url(../img/icons/orkut.png) no-repeat }
+#icons .paypal 		{ background: url(../img/icons/paypal.png) no-repeat }
+#icons .picasa 		{ background: url(../img/icons/picasa.png) no-repeat }
+#icons .pinterest 	{ background: url(../img/icons/pinterest.png) no-repeat }
+#icons .reddit 		{ background: url(../img/icons/reddit.png) no-repeat }
+#icons .rss 		{ background: url(../img/icons/rss.png) no-repeat }
+#icons .share_this 	{ background: url(../img/icons/share_this.png) no-repeat }
+#icons .skype 		{ background: url(../img/icons/skype.png) no-repeat }
+#icons .star 		{ background: url(../img/icons/star.png) no-repeat }
+#icons .stumble_upon{ background: url(../img/icons/stumble_upon.png) no-repeat }
+#icons .technorati 	{ background: url(../img/icons/technorati.png) no-repeat }
+#icons .tumblr		{ background: url(../img/icons/tumblr.png) no-repeat }
+#icons .twitter 	{ background: url(../img/icons/twitter.png) no-repeat }
+#icons .twitter2 	{ background: url(../img/icons/twitter2.png) no-repeat }
+#icons .vimeo 		{ background: url(../img/icons/vimeo.png) no-repeat }
+#icons .wp 			{ background: url(../img/icons/wp.png) no-repeat }
+#icons .yahoo 		{ background: url(../img/icons/yahoo.png) no-repeat }
+#icons .you_tube 	{ background: url(../img/icons/you_tube.png) no-repeat }
+
+
+/* === Mobile Devices Section === */
+@media screen and (max-width: 480px),
+screen and (max-device-width: 480px) {
+	html, body {
+		min-width: 0;
+		min-height: 0;
+	}
+
+	#wrapper,
+	#count-wrap {
+		margin: 0;
+		width: 100%;
+	}
+	
+	header {
+		padding-top: 15px;
+	}
+	
+	#logo {
+		font-size: 2.5em;
+	}
+	
+	#count-wrap .number_wrapper {
+		text-align: center;
+	}
+	
+	#count-wrap .num {
+		font: bold 4em Oswald;
+		text-shadow: 1px 1px 2px #111;
+		display: inline-block;
+	}
+	
+	#count-wrap .num > div:last-child { display: none; }
+	
+	#progressbar {
+		margin: 20px auto;
+		width: 90%;
+	}
+	
+	#progressbar > .wrap {
+		width: 90%;
+	}
+	
+	#communication {
+		margin-top: 50px;
+	}
+	
+	#email { float: none }
+	#social {
+		float: none;
+		margin-top: -35px;
+		padding-bottom: 25px;
+	}
+	
+	#email, #social {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 481px) {	
+	#count-wrap .num {
+		width: 70px;
+		height: 140px;
+		font: 6em Oswald;
+		text-align: center;
+		
+		text-shadow: 1px 1px 2px #111;
+		
+		float: left;
+		overflow: hidden;
+	}
+	
+	#count-wrap .number_wrapper {
+		margin-right: 40px;
+		display: inline-block;
+	}
+	
+	#count-wrap .number_wrapper.nmr {
+		margin-right: 0;
+	}
+}
+
+
+/* === iPad Section === */
+@media screen and (min-width: 481px) and (max-width: 1024px), 
+screen and (min-device-width: 481px) and (max-device-width: 1024px) { 
+	body { background-image: url(../img/bg.jpg) !important }
+	
+	#communication {
+		margin-top: 105px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px), 
+screen and (min-device-width: 768px) and (max-device-width: 768px) { 
+	body { background-image: url(../img/bg4.jpg) !important }
+}
+
+/* === Different Resolutions Section === */
+@media screen and (min-width: 1025px) and (max-width: 1440px),
+screen and (min-device-width: 1025px) and (max-device-width: 1440px) { 
+	body { background-image: url(../img/bg.jpg) }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px),
+screen and (min-device-width: 1441px) and (max-device-width: 1920px) { 
+	body { background-image: url(../img/bg.jpg) }
+}
+
+@media screen and (min-width: 1921px),
+screen and (min-device-width: 1921px) { 
+	body { background-image: url(../img/bg.jpg) }
+}
